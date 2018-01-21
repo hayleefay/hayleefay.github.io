@@ -10,6 +10,11 @@ body {
   padding-bottom: 50px;
 }
 
+a, a:focus, a:visited, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
 h1 {
   font-family: 'Lora', serif;
   font-weight: normal;
@@ -47,6 +52,10 @@ p {
   letter-spacing: 0.4px;
   margin: 0;
   line-height: 20px;
+}
+
+img {
+  max-width: 100%;
 }
 
 .container {
@@ -109,16 +118,58 @@ p {
 
 .education {
   position: relative;
+  height: 70vh;
 }
 
 .education img {
   position: absolute;
   z-index: -1;
-  opacity: 0.15;
+  opacity: 0.25;
   top: -100px;
   left: -150px;
+  width: 900px;
 }
 
 .degree {
   padding: 10px 0;
+}
+
+.projects {
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  margin-bottom: 150px;
+}
+
+.project .image {
+  flex: 1 1 50%;
+}
+
+.project .content {
+  flex: 1 1 50%;
+  padding-right: 100px;
+}
+
+.osm-link {
+  transition: color 0.5s;
+}
+
+.osm-link:hover {
+  color: #8ab9e0;
+}
+
+.twitter-link {
+  transition: color 0.5s;
+}
+
+.twitter-link:hover {
+  color: #b4efde;
+}
+
+.twitter-image {
+  display: block;
+  margin: auto;
+  max-width: 300px;
 }
