@@ -1,4 +1,4 @@
-# hayleefay.github.io
+# haylee.codes
 
 
-A resume built using Flask
+A resume site on Github Pages
