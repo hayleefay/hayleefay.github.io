@@ -8,6 +8,7 @@ html {
 
 body {
   padding-bottom: 50px;
+  margin: 0;
 }
 
 a, a:focus, a:visited, a:active {
@@ -43,7 +44,7 @@ h4 {
   font-size: 24px;
   font-weight: bold;
   letter-spacing: 0.25px;
-  margin: 0;
+  margin: 0 0 10px 0;
 }
 
 p {
@@ -58,11 +59,100 @@ img {
   max-width: 100%;
 }
 
+.section {
+  padding: 0 20px;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  color: #fff;
+  text-align: center;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: -25px;
+  left: -50%;
+  opacity: 0.5;
+  transition: opacity 1s;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+.small-skill .tooltip .tooltiptext {
+  left: -100%;
+}
+
+.tooltip .python-tt {
+  color: black;
+  background-color: #b4efde;
+}
+
+.tooltip .r-tt {
+  color: black;
+  background-color: #8ab9e0;
+}
+
+.tooltip .django-tt {
+  color: black;
+  background-color: #FEF69F;
+}
+
+.tooltip .heroku-tt {
+  color: black;
+  background-color: #AF97F4;
+}
+
+.tooltip .github-tt {
+  color: black;
+  background-color: #F2A7A5;
+}
+
+.tooltip .git-tt {
+  color: black;
+  background-color: #b4efde;
+}
+
+.tooltip .js-tt {
+  color: black;
+  background-color: #8ab9e0;
+}
+
+.tooltip .mongo-tt {
+  color: black;
+  background-color: #FEF69F;
+}
+
+.tooltip .postgresql-tt {
+  color: black;
+  background-color: #AF97F4;
+}
+
+.tooltip .html-tt {
+  color: black;
+  background-color: #F2A7A5;
+}
+
+.tooltip .css-tt {
+  color: black;
+  background-color: #b4efde;
+}
+
 .container {
   max-width: 1100px;
   width: 100%;
   margin: auto;
-  padding: 0 10px;
 }
 
 .github {
@@ -80,6 +170,7 @@ img {
   display: flex;
   flex-direction: column;
   height: 80vh;
+  max-height: 800px;
   position: relative;
 }
 
@@ -119,6 +210,7 @@ img {
 .education {
   position: relative;
   height: 70vh;
+  max-height: 800px;
 }
 
 .education img {
@@ -134,7 +226,42 @@ img {
   padding: 10px 0;
 }
 
+.skills {
+  position: relative;
+  height: 70vh;
+  max-height: 800px;
+}
+
+.skill img {
+  width: 60px;
+  height: 60px;
+}
+
+.skills h4 {
+  padding: 30px 0 10px 50px;
+}
+
+.skill {
+  display: inline-block;
+  padding: 10px 10px 0 50px;
+}
+
+.small-skill {
+  display: inline-block;
+  padding: 10px 10px 0 50px;
+}
+
+.small-skill:first-of-type {
+  padding: 10px 10px 0 150px;
+}
+
+.small-skill img {
+  width: 40px;
+  height: 40px;
+}
+
 .projects {
+  position: relative;
 }
 
 .project {
@@ -172,4 +299,71 @@ img {
   display: block;
   margin: auto;
   max-width: 300px;
+}
+
+@media all and (max-width: 1100px) {
+  .header {
+    overflow-x: hidden;
+  }
+}
+
+@media all and (max-width: 768px) {
+  h1 {
+    margin-top: 60px;
+  }
+
+  .blob-green {
+    top: 60px;
+    left: -10px;
+  }
+
+  .blob-blue {
+    top: 330px;
+    left: 250px;
+  }
+
+  .blob-yellow {
+    top: 265px;
+    left: 60px;
+  }
+
+  .blob-pink {
+    top: 160px;
+    left: 125px;
+  }
+
+  .blob-purple {
+    top: 100px;
+    left: 340px;
+  }
+
+  .project {
+    flex-wrap: wrap;
+    margin-bottom: 85px;
+  }
+
+  .project .image {
+    flex: 1 1 100%;
+    margin-bottom: 20px;
+    order: 1;
+  }
+
+  .project .content {
+    flex: 1 1 100%;
+    order: 2;
+    padding: 0;
+  }
+
+  .education img {
+    left: -80px;
+  }
+
+  .small-skill:first-of-type {
+    padding: 10px 10px 0 50px;
+  }
+
+  .skills {
+    padding-bottom: 80px;
+    height: auto;
+  }
 }
