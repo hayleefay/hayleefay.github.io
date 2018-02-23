@@ -94,6 +94,10 @@ img {
   left: -100%;
 }
 
+.small-skill .tooltip .tooltiptext.sk-tt{
+  left: -30%;
+}
+
 .tooltip .python-tt {
   color: black;
   background-color: #b4efde;
@@ -102,6 +106,11 @@ img {
 .tooltip .r-tt {
   color: black;
   background-color: #8ab9e0;
+}
+
+.tooltip .sql-tt {
+  color: black;
+  background-color: #F2A7A5;
 }
 
 .tooltip .django-tt {
@@ -120,6 +129,16 @@ img {
 }
 
 .tooltip .git-tt {
+  color: black;
+  background-color: #b4efde;
+}
+
+.tooltip .sk-tt {
+  color: black;
+  background-color: #AF97F4;
+}
+
+.tooltip .keras-tt {
   color: black;
   background-color: #b4efde;
 }
@@ -256,7 +275,7 @@ img {
 }
 
 .small-skill img {
-  width: 40px;
+  /* width: 40px; */
   height: 40px;
 }
 
