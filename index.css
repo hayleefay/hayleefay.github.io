@@ -118,6 +118,11 @@ img {
   background-color: #FEF69F;
 }
 
+.tooltip .flask-tt {
+  color: black;
+  background-color: #b4efde;
+}
+
 .tooltip .heroku-tt {
   color: black;
   background-color: #AF97F4;
@@ -262,7 +267,7 @@ img {
 
 .skill {
   display: inline-block;
-  padding: 10px 10px 0 50px;
+  padding: 10px 10px 20px 75px;
 }
 
 .small-skill {
