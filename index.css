@@ -303,6 +303,18 @@ img {
   padding-right: 100px;
 }
 
+.biomusic-link {
+  transition: color 0.5s;
+}
+
+.biomusic-link:hover {
+  color: #AF97F4;
+}
+
+.biomusic-image {
+  box-shadow: 2px 4px 17px 0px rgba(0, 0, 0, 0.2);
+}
+
 .osm-link {
   transition: color 0.5s;
 }
