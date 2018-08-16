@@ -303,6 +303,19 @@ img {
   padding-right: 100px;
 }
 
+.thesis-link {
+  transition: color 0.5s;
+}
+
+.thesis-link:hover {
+  color: #F2A7A5;
+}
+
+.thesis-image {
+  width: 400px;
+  box-shadow: 2px 4px 17px 0px rgba(0, 0, 0, 0.2);
+}
+
 .biomusic-link {
   transition: color 0.5s;
 }
