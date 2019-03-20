@@ -7,7 +7,6 @@ html {
 }
 
 body {
-  padding-bottom: 50px;
   margin: 0;
 }
 
@@ -60,7 +59,83 @@ img {
 }
 
 .section {
-  padding: 0 20px;
+  padding: 0 50px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  border-radius: 6px;
+}
+
+.card-small {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  border-radius: 6px;
+}
+
+.card.python-card {
+  background-color: #d4f9ee;
+}
+
+.card.r-card {
+  background-color: #b4dbfb;
+}
+
+.card.sql-card {
+  background-color: #fbbcbac4;
+}
+
+.card.tensorflow-card {
+  background-color: #b4dbfb;
+}
+
+.card.keras-card {
+  background-color: #fef69fba;
+}
+
+.card.postgresql-card {
+  background-color: #c8b7f9c9;
+}
+
+.card.bokeh-card {
+  background-color: #fef69fba;
+}
+
+.card.heroku-card {
+  background-color: #c8b7f9c9;
+}
+
+.card.github-card {
+  background-color: #d4f9ee;
+}
+
+.card.git-card {
+  background-color: #fbbcbac4;
+}
+
+.card-small.flask-card {
+  background-color: #DCDCDC;
+}
+
+.card-small.django-card {
+  background-color: #DCDCDC;
+}
+
+.card-small.js-card {
+  background-color: #DCDCDC;
+}
+
+.card-small.mongo-card {
+  background-color: #DCDCDC;
+}
+
+.card-small.html-card {
+  background-color: #DCDCDC;
+}
+
+.card-small.css-card {
+  background-color: #DCDCDC;
 }
 
 .tooltip {
@@ -79,10 +154,18 @@ img {
   padding: 5px 0;
   position: absolute;
   z-index: 1;
-  bottom: -25px;
-  left: -50%;
-  opacity: 0.5;
+  transform: translateX(-50%);
+  opacity: 0;
   transition: opacity 1s;
+}
+
+.tooltip-wrapper {
+  bottom: -10px;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
 }
 
 .tooltip:hover .tooltiptext {
@@ -91,12 +174,12 @@ img {
 }
 
 .small-skill .tooltip .tooltiptext {
-  left: -100%;
+  z-index: 2;
 }
 
-.small-skill .tooltip .tooltiptext.sk-tt{
-  left: -30%;
-}
+/* .small-skill .tooltip .tooltiptext.flask-tt{
+  left: -0%;
+} */
 
 .tooltip .python-tt {
   color: black;
@@ -130,32 +213,37 @@ img {
 
 .tooltip .github-tt {
   color: black;
-  background-color: #F2A7A5;
+  background-color: #b4efde;
 }
 
 .tooltip .git-tt {
   color: black;
-  background-color: #b4efde;
-}
-
-.tooltip .sk-tt {
-  color: black;
-  background-color: #AF97F4;
+  background-color: #F2A7A5;
 }
 
 .tooltip .keras-tt {
   color: black;
-  background-color: #b4efde;
+  background-color: #FEF69F;
 }
 
-.tooltip .js-tt {
+.tooltip .tensorflow-tt {
   color: black;
   background-color: #8ab9e0;
 }
 
-.tooltip .mongo-tt {
+.tooltip .bokeh-tt {
   color: black;
   background-color: #FEF69F;
+}
+
+.tooltip .js-tt {
+  color: black;
+  background-color: #AF97F4;
+}
+
+.tooltip .mongo-tt {
+  color: black;
+  background-color: #b4efde;
 }
 
 .tooltip .postgresql-tt {
@@ -170,7 +258,7 @@ img {
 
 .tooltip .css-tt {
   color: black;
-  background-color: #b4efde;
+  background-color: #FEF69F;
 }
 
 .container {
@@ -193,7 +281,7 @@ img {
 .header {
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  height: 60vh;
   max-height: 800px;
   position: relative;
 }
@@ -233,7 +321,7 @@ img {
 
 .education {
   position: relative;
-  height: 70vh;
+  height: 60vh;
   max-height: 800px;
 }
 
@@ -252,8 +340,8 @@ img {
 
 .skills {
   position: relative;
-  height: 70vh;
-  max-height: 800px;
+  height: 85vh;
+  padding-bottom: 80px;
 }
 
 .skill img {
@@ -267,7 +355,7 @@ img {
 
 .skill {
   display: inline-block;
-  padding: 10px 10px 20px 75px;
+  padding: 20px 40px 20px;
 }
 
 .small-skill {
@@ -286,6 +374,7 @@ img {
 
 .projects {
   position: relative;
+  padding-bottom: 80px;
 }
 
 .project {
@@ -309,6 +398,14 @@ img {
 
 .thesis-link:hover {
   color: #F2A7A5;
+}
+
+.characters-link {
+  transition: color 0.5s;
+}
+
+.characters-link:hover {
+  color: #b4efde;
 }
 
 .thesis-image {
@@ -353,6 +450,7 @@ img {
 .contact {
   margin-top: 300px;
   margin-bottom: 100px;
+  background-color: #000000;
 }
 
 @media all and (max-width: 1100px) {
@@ -411,13 +509,36 @@ img {
   .education img {
     left: -80px;
   }
+}
 
-  .small-skill:first-of-type {
-    padding: 10px 10px 0 50px;
-  }
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #8ab9e0;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+  display: flex;
+}
 
-  .skills {
-    padding-bottom: 80px;
-    height: auto;
-  }
+.footer-heading {
+  flex: 0 0 20%;
+}
+
+.footer-contacts {
+  flex: 1 1 auto;
+  text-align: left;
+}
+
+.footer-heading-text {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1;
+  text-align: left;
+}
+
+.contact-a {
+  text-decoration: underline;
 }
