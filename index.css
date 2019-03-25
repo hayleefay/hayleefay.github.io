@@ -66,75 +66,14 @@ img {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 16px;
   border-radius: 6px;
+  text-align: center;
 }
 
 .card-small {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 16px;
   border-radius: 6px;
-}
-
-.card.python-card {
-  background-color: #d4f9ee;
-}
-
-.card.r-card {
-  background-color: #b4dbfb;
-}
-
-.card.sql-card {
-  background-color: #fbbcbac4;
-}
-
-.card.tensorflow-card {
-  background-color: #b4dbfb;
-}
-
-.card.keras-card {
-  background-color: #fef69fba;
-}
-
-.card.postgresql-card {
-  background-color: #c8b7f9c9;
-}
-
-.card.bokeh-card {
-  background-color: #fef69fba;
-}
-
-.card.heroku-card {
-  background-color: #c8b7f9c9;
-}
-
-.card.github-card {
-  background-color: #d4f9ee;
-}
-
-.card.git-card {
-  background-color: #fbbcbac4;
-}
-
-.card-small.flask-card {
-  background-color: #DCDCDC;
-}
-
-.card-small.django-card {
-  background-color: #DCDCDC;
-}
-
-.card-small.js-card {
-  background-color: #DCDCDC;
-}
-
-.card-small.mongo-card {
-  background-color: #DCDCDC;
-}
-
-.card-small.html-card {
-  background-color: #DCDCDC;
-}
-
-.card-small.css-card {
+  text-align: center;
   background-color: #DCDCDC;
 }
 
@@ -176,10 +115,6 @@ img {
 .small-skill .tooltip .tooltiptext {
   z-index: 2;
 }
-
-/* .small-skill .tooltip .tooltiptext.flask-tt{
-  left: -0%;
-} */
 
 .tooltip .python-tt {
   color: black;
@@ -281,8 +216,7 @@ img {
 .header {
   display: flex;
   flex-direction: column;
-  height: 60vh;
-  max-height: 800px;
+  min-height: 60vh;
   position: relative;
 }
 
@@ -321,7 +255,7 @@ img {
 
 .education {
   position: relative;
-  height: 60vh;
+  min-height: 60vh;
   max-height: 800px;
 }
 
@@ -338,10 +272,10 @@ img {
   padding: 10px 0;
 }
 
-.skills {
+.skills.section {
   position: relative;
-  height: 85vh;
-  padding-bottom: 80px;
+  min-height: 85vh;
+  padding-bottom: 180px;
 }
 
 .skill img {
@@ -360,16 +294,12 @@ img {
 
 .small-skill {
   display: inline-block;
-  padding: 10px 10px 0 50px;
-}
-
-.small-skill:first-of-type {
-  padding: 10px 10px 0 150px;
+  padding: 10px 10px 30px 50px;
 }
 
 .small-skill img {
-  /* width: 40px; */
   height: 40px;
+  width: 40px;
 }
 
 .projects {
@@ -453,9 +383,9 @@ img {
   background-color: #000000;
 }
 
-@media all and (max-width: 1100px) {
+@media all and (max-width: 1000px) {
   .header {
-    overflow-x: hidden;
+    overflow: hidden;
   }
 }
 
@@ -470,7 +400,7 @@ img {
   }
 
   .blob-blue {
-    top: 330px;
+    top: 300px;
     left: 250px;
   }
 
@@ -512,10 +442,6 @@ img {
 }
 
 .footer {
-  position: relative;
-  left: 0;
-  bottom: 0;
-  width: 100%;
   background-color: #8ab9e0;
   color: white;
   text-align: center;
@@ -528,7 +454,7 @@ img {
 }
 
 .footer-contacts {
-  flex: 1 1 auto;
+  flex: 1 1 0;
   text-align: left;
 }
 
@@ -541,4 +467,48 @@ img {
 
 .contact-a {
   text-decoration: underline;
+}
+
+.large-skill-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 10px;
+}
+
+.small-skill-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-column-gap: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  .large-skill-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .small-skill-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .large-skill-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .small-skill-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .section {
+    padding: 0 15px;
+  }
+
+  .footer {
+    display: block;
+  }
+
+  .footer-heading, .footer-contacts {
+    flex: none;
+  }
 }
